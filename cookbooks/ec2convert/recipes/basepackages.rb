@@ -1,6 +1,6 @@
 log "Hello, Chef!"
 
-%w{gcc make git}.each do |pkg|
+%w{gcc make git nano}.each do |pkg|
   package pkg do
     action :install
   end
