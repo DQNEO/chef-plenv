@@ -58,13 +58,8 @@ execute "install-ImageMagick" do
 
   command <<-EOH
 
+    ./configure --prefix=#{HOME_DIR}/local --with-perl=#{HOME_DIR}/.plenv/shims/perl  --enable-shared --disable-openmp --disable-opencl --without-x
 
-    #{HOME_DIR}/.plenv/bin/plenv rehash
-    #{HOME_DIR}/.plenv/bin/plenv global #{PERL_VERSION}
-    #{HOME_DIR}/.plenv/bin/plenv rehash
-
-    ./configure --prefix=#{HOME_DIR}/local  --disable-openmp --disable-opencl --enable-shared --with-perl
-    make perl-sources 
     make
     make install
   EOH
