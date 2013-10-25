@@ -48,7 +48,8 @@ bash "plenv setup and setup perl" do
         #{HOME_DIR}/.plenv/bin/plenv install-cpanm
         #{HOME_DIR}/.plenv/bin/plenv rehash
    EOC
-  not_if { File.exist?("#{HOME_DIR}/.plenv/shims/perl5.18.1 ") }
+  
+  not_if { File.exist?("#{HOME_DIR}/.plenv/shims/perl#{PERL_VERSION}") }
   action :run
 end
 
