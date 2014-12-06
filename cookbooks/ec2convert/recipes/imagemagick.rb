@@ -1,7 +1,7 @@
 USER_NAME="vagrant"
 GROUP_NAME="vagrant"
 HOME_DIR="/home/vagrant"
-IM_VERSION="6.8.7-2"
+IM_VERSION="6.9.0-0"
 PERL_VERSION="5.18.1"
 
 # sudo yum install libjpeg-turbo libjpeg-turbo-devel
