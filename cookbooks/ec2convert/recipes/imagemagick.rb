@@ -52,7 +52,6 @@ execute "install-ImageMagick" do
     make install
   EOH
 
-  #not_if { File.exist?("#{HOME_DIR}/local/bin/convert") }
+  not_if { File.exist?("#{HOME_DIR}/local/bin/convert") }
 
-  action :nothing
 end
