@@ -39,16 +39,6 @@ execute "extract-ImageMagick" do
   action :run
 end
 
-execute "jikken" do
-  user "vagrant"
-  command <<-EOH
-    echo ==========
-    which perl
-    echo ==========
-  EOH
-  action :run
-end
-
 # install imagemagick
 execute "install-ImageMagick" do
   user USER_NAME
