@@ -1,7 +1,7 @@
 {
   "run_list" : [
-    "recipe[ec2convert::basepackages]",
-    "recipe[ec2convert::plenv]",
-    "recipe[ec2convert::imagemagick]"
+    "packages",
+    "perl",
+    "imagemagick"
   ]
 }
