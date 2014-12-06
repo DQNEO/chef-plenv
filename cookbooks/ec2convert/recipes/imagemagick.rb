@@ -27,14 +27,12 @@ directory "#{HOME_DIR}/local" do
 end
 
 # download imagemagick and extract it
-execute "download-ImageMagick" do
+execute "extract-ImageMagick" do
   user USER_NAME
 
   cwd "#{HOME_DIR}/src"
   command <<-EOH
-
-    wget 'ftp://ftp.kddlabs.co.jp/graphics/ImageMagick/ImageMagick-#{IM_VERSION}.tar.gz'
-    tar xvfz ImageMagick-#{IM_VERSION}.tar.gz 
+    tar xvfz /vagrant/ImageMagick-#{IM_VERSION}.tar.gz
   EOH
 
   not_if { File.exist?("#{HOME_DIR}/src/ImageMagick-#{IM_VERSION}") }
